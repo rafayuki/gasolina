@@ -1,0 +1,19 @@
+tempo = int(input("Quanto tempo de viagem? ")) 
+velocidade = int(input("Qual será a velocidade média durante a viagem? "))
+vmax = int(input("Qual o volume total do tanque de gasolina do carro? "))
+vatual = int(input("Qual o volume atual do tanque de gasolina do carro? "))
+print(f"\n")
+dist = tempo * velocidade
+comb = round(dist/12, ndigits = 2)
+
+
+x = round(vatual - comb, ndigits = 2)
+y = abs(x) * 7
+
+print(f"Você precisará de {comb} litros para a viagem.")
+if x > 0:
+    print(f"O seu tanque tem gasolina suficiente para a viagem. Restarão {x} litros.")
+else:
+    print(f"Contudo, seu tanque não tem gasolina suficiente para a viagem. Você precisará reabastecer {abs(x)} litros durante a viagem.")
+    print(f"Você irá gastar um total de R${round(y, ndigits = 2)} com gasolina na viagem.")
+
